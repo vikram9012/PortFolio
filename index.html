@@ -13,7 +13,6 @@
             <p>Actor | Model</p>
             <p>Phone: +919098652059 | Email: <a href="mailto:work.vikramsharma@gmail.com">work.vikramsharma@gmail.com</a></p>
             <p>Follow me on: <a href="https://www.instagram.com/_vikramsharma11?igsh=dm00OGp1c2FyeW4w" target="_blank" rel="noopener noreferrer" style="color: hotpink; text-decoration: underline;">Instagram</a></p>
-
         </div>
     </header>
 
@@ -29,57 +28,47 @@
             <h2>Portfolio</h2>
             <div class="gallery">
                 <div class="gallery-item">
-                    <img src="Images\WhatsApp Image 2024-08-31 at 11.29.42 AM.jpeg">
+                    <img src="Images/WhatsApp Image 2024-08-31 at 11.29.42 AM.jpeg" alt="Gallery Image 1">
                 </div>
                 <div class="gallery-item">
-                    <img src="Images\WhatsApp Image 2024-08-31 at 9.11.35 PM.jpeg">
+                    <img src="Images/WhatsApp Image 2024-08-31 at 9.11.35 PM.jpeg" alt="Gallery Image 2">
                 </div>
                 <div class="gallery-item">
-                    <img src="Images\WhatsApp Image 2024-08-31 at 9.20.55 PM.jpeg">
-                </div>                
-                <div class="gallery-item">
-                    <img src="Images\WhatsApp Image 2024-08-31 at 10.08.53 PM.jpeg" >
+                    <img src="Images/WhatsApp Image 2024-08-31 at 9.20.55 PM.jpeg" alt="Gallery Image 3">
+                </div>
+                <div class="gallery-item large-image">
+                    <img src="Images/WhatsApp Image 2024-08-31 at 9.16.00 PM.jpeg" alt="Large Gallery Image">
                 </div>
                 <div class="gallery-item">
-                    <img src="Images\WhatsApp Image 2024-08-31 at 9.59.02 PM.jpeg" >
+                    <img src="Images/WhatsApp Image 2024-08-31 at 9.59.02 PM.jpeg" alt="Gallery Image 5">
                 </div>
                 <div class="gallery-item">
-                    <img src="Images\WhatsApp Image 2024-08-31 at 9.16.00 PM.jpeg" >
+                    <img src="Images\WhatsApp Image 2024-09-01 at 11.52.10 AM.jpeg" alt="Gallery Image 6">
                 </div>
                 <div class="gallery-item">
-                    <img src="Images\WhatsApp Image 2024-08-31 at 11.56.21 AM (2).jpeg" >
+                    <img src="Images/WhatsApp Image 2024-08-31 at 11.56.21 AM (2).jpeg" alt="Gallery Image 7">
                 </div>
                 <div class="gallery-item">
-                    <img src="Images\WhatsApp Image 2024-08-31 at 9.50.27 PM.jpeg">
+                    <img src="Images\WhatsApp Image 2024-09-01 at 12.46.52 PM.jpeg" alt="Gallery Image 8">
                 </div>
                 <div class="gallery-item">
-                    <img src="Images\WhatsApp Image 2024-08-31 at 11.42.41 AM.jpeg">
+                    <img src="Images\WhatsApp Image 2024-09-01 at 12.44.19 PM.jpeg" alt="Gallery Image 11">
                 </div>
                 <div class="gallery-item">
-                    <img src="Images\WhatsApp Image 2024-08-31 at 11.42.40 AM (2).jpeg" >
+                    <img src="Images/WhatsApp Image 2024-08-31 at 11.56.21 AM.jpeg" alt="Gallery Image 12">
                 </div>
                 <div class="gallery-item">
-                    <img src="Images\WhatsApp Image 2024-08-31 at 11.56.21 AM.jpeg">
-                </div>
-                <div class="gallery-item">
-                    <img src="Images\WhatsApp Image 2024-08-31 at 11.55.05 AM.jpeg">
-                </div>
-                <div class="gallery-item">
-                    <img src="Images\WhatsApp Image 2024-08-31 at 11.56.21 AM (1).jpeg" >
-                </div>
-                <div class="gallery-item">
-                    <img src="Images\WhatsApp Image 2024-08-31 at 11.55.22 AM.jpeg">
+                    <img src="Images/WhatsApp Image 2024-08-31 at 11.56.21 AM (1).jpeg" alt="Gallery Image 13">
                 </div>
             </div>
         </div>
     </section>
+    
 
     <section id="resume">
         <div class="container">
             <h2>Resume</h2>
-            
             <h3>Acting Experience</h3>
-            
             <h4>TV Commercials (TVCs) & Digital Ads</h4>
             <ul>
                 <li><strong>Lead Role</strong> in HP Gas</li>
@@ -88,14 +77,14 @@
                 <li><strong>Featured Role</strong> in IDFC First Bank</li>
                 <li><strong>Lead Role</strong> in Howzat</li>
             </ul>
-    
+
             <h3>Education</h3>
             <ul>
                 <li><strong>Acting Workshops</strong>, Ankita Bajaj Casting – ABC of Audition</li>
                 <li><strong>Acting Course</strong>, Private Institute – Camera and Theatre Acting</li>
                 <li><strong>Bachelor of Business Administration</strong>, Shri Shankracharya Bhilai</li>
             </ul>
-    
+
             <h3>Skills</h3>
             <ul>
                 <li>Print Modeling</li>
@@ -111,5 +100,48 @@
             <p>© 2024 Vikram Sharma</p>
         </div>
     </footer>
+
+    <!-- Popup HTML -->
+    <div id="popup-overlay" class="popup-overlay">
+        <span class="close-btn">&times;</span>
+        <img id="popup-img" src="" alt="Popup Image">
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const overlay = document.getElementById('popup-overlay');
+            const popupImg = document.getElementById('popup-img');
+            const closeBtn = document.querySelector('.popup-overlay .close-btn');
+
+            // Function to open the popup
+            function openPopup(src) {
+                popupImg.src = src;
+                overlay.style.display = 'flex';
+            }
+
+            // Function to close the popup
+            function closePopup() {
+                overlay.style.display = 'none';
+            }
+
+            // Add click event listeners to gallery items
+            document.querySelectorAll('.gallery-item img').forEach(img => {
+                img.addEventListener('click', function () {
+                    openPopup(this.src);
+                });
+            });
+
+            // Add click event listener to close button
+            closeBtn.addEventListener('click', closePopup);
+
+            // Close popup when clicking outside of the image
+            overlay.addEventListener('click', function (e) {
+                if (e.target === overlay) {
+                    closePopup();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
